@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Coach AI - 你的个人成长助手</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 页面标题 -->
+    <header>
+        <h1>Life Coach AI</h1>
+        <p>你的个人成长助手</p>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 对话历史区域 -->
+        <div id="chat-history" class="chat-container">
+            <div id="loading-spinner" class="loading-spinner"></div>
+            <!-- 对话消息将在这里动态插入 -->
+        </div>
+
+        <!-- 用户输入区域 -->
+        <div class="input-container">
+            <textarea
+                id="user-input"
+                placeholder="输入你的问题或想法..."
+                rows="3"
+            ></textarea>
+            <button id="send-button" type="button">发送</button>
+        </div>
+    </main>
+
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" type="button" aria-label="切换主题">
+        <span class="theme-icon">🌞</span>
+    </button>
+
+    <!-- JavaScript 文件 -->
+    <script src="main.js"></script>
+</body>
+</html>
