@@ -10,9 +10,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
 
+// 加载环境变量
+require('dotenv').config();
+
 // DeepSeek R1 API配置
-const API_KEY = 'fa2263f9-0ac4-41b5-ae0f-472ba67e3d00';
-const API_URL = 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+const API_KEY = process.env.DEEPSEEK_API_KEY;
+const API_URL = process.env.DEEPSEEK_API_URL;
 
 // 系统提示词
 const SYSTEM_PROMPT = `你是一位专业的Life Coach，拥有丰富的个人成长和发展咨询经验。
