@@ -28,6 +28,11 @@ const SYSTEM_PROMPT = `你是一位专业的Life Coach，拥有丰富的个人�
 
 // 处理聊天请求
 app.post('/chat', async (req, res) => {
+    // 检查API密钥是否已配置
+    if (API_KEY === 'your_api_key_here') {
+        res.status(400).json({ error: '请先在.env文件中配置正确的API密钥' });
+        return;
+    }
     try {
         // 设置响应头，启用流式输出
         res.setHeader('Content-Type', 'text/event-stream');
